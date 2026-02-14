@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap');
+h1{
+    font-family: "Bitcount Single", system-ui;
+    color: teal;
+    font-size: 50px;
+    border: 10px solid  pink;
+    
+}
+h1:hover{
+    color: olive;
+    /* border-radius: 20px; */
+    text-decoration-line: underline;
+    /* text-decoration-style: dotted; */
+    border: none;
+    
+}
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+footer>p{
+    font-family: "Bitcount Single", system-ui;
+    background-color: pink;
+    color: teal;
+    font-size: 50px;
+}
+footer>p:hover{
+    color: palegreen;
+    border: 2px solid black;
+    
+}

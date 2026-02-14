@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      header {
+        width: 100%;
+        height: 72px;
+        display: flex;
+        /* border: 1px solid green; */
+        background-color: #fff;
+        justify-content: space-around;
+        /* position: fixed; */
+        /* margin-top: 0px; */
+        /* top: 0px;position: absolute; */
+      }
+      aside {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid red; */
+      }
+      nav {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        /* border: 1px solid blue; */
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        list-style: none;
+      }
+      button {
+        width: 100px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #014fbd;
+        color: #ffffff;
+        margin-right: 20px;
+      }
+      ul {
+        display: flex;
+        padding-right: 50px;
+      }
+      li {
+        list-style: none;
+        margin: 0 10px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        font-family: "DM Sans", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        /* font-family: "DM Sans", sans-serif; */
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        font-weight: 600;
+        color: #1d1a4e;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        /* font-family: "DM Sans", sans-serif; */
+        font-size: 16px;
+        line-height: 28px;
+      }
+      #content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid red;
+      }
+      #boxcontainer {
+        width: 100%;
+        height: 800px;
+        display: flex;
+        align-items: center;
+         border: 1px solid blue; 
+        margin: 20px auto;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+      .box {
+        width: 600px;
+        height: 300px;
+        border-radius: 10px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+      .box {
+        position: relative;
+      }
+      .sub_cont {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #1d1a4e;
+      }
+      .sub_cont2 {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #1d1a4e;
+      }
+      .service_box {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <aside>
+        <div>
+          <img
+            src="https://inextrix.com/wp-content/uploads/2021/09/Inextrix_New_logo-1-1.png"
+            alt=""
+          />
+        </div>
+      </aside>
+      <nav>
+        <ul type="none">
+          <li><a href="">Services</a></li>
+          <li><a href="">Solutions</a></li>
+          <li><a href="">Our Products</a></li>
+          <li><a href="">Hire Developers</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+        <button>Lets Talk</button>
+      </nav>
+    </header>
+    <h2>Our Offerings</h2>
+    <div id="content">
+      <p>
+        Our subject matter experts and technical specialists ensure to give you
+        the benefit of transformative <br />
+        technologies, impressive scale, and supersonic speed.
+      </p>
+    </div>
+    <div id="boxcontainer">
+      <div class="box" id="box1">
+        <a class="sub_cont">VoIP Development</a>
+        <p class="sub_cont2">
+          Quality communication propels ambitions and growth in organizations.
+          We build sustainable, scalable, and brilliant real time communication
+          tools that match your vision and business goals with our tailored VoIP
+          development services.
+        </p>
+        <div class="service_box">
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/freeswitch-1-1.webp?fit=80%2C80&ssl=1" alt=""><span>Freswitch</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/asterisk-1-1.webp?fit=80%2C80&ssl=1" alt="">Asterick</div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/opensips-2-1.webp?fit=80%2C80&ssl=1" alt=""><span>OpenSIPS</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/kamailio-2-1.webp?fit=80%2C80&ssl=1" alt=""><span>Kamailio</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/webrtc-2-1.webp?fit=80%2C80&ssl=1" alt=""><span>WebRTC</span></div>
+        </div>
+      </div>
+      <div class="box" id="box2">
+        <a class="sub_cont">Mobile App Development</a>
+        <p class="sub_cont2">
+          Extend your reach and clientele with highly engaging mobile
+          applications that fuel up returns and business adaptability. Our
+          native and cross platform mobile app development transforms dreams
+          into amplified revenue generation.
+        </p>
+        <div class="service_box">
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/android-1-1.webp?fit=80%2C80&ssl=1" alt=""><span>Android</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/ios-1-1.webp?fit=80%2C80&ssl=1" alt="">iOS</div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/react-native-1.webp?fit=80%2C80&ssl=1" alt=""><span>React Native</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/flutter-1-1.webp?fit=80%2C80&ssl=1" alt=""><span>Flutter</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/progresiv-web-1.webp?fit=80%2C80&ssl=1" alt=""><span>Progressive Web App</span></div>
+        </div>
+      </div>
+      <div class="box" id="box3"><a class="sub_cont">Web Development</a><p class="sub_cont2">
+          Reduce bounce rates, increase navigation, and improve returning visitors. Bring out the best for your digital presence with an enchanting web app, website, and web products built by the industry’s leading web development company.
+        </p>
+        <div class="service_box">
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/react-native-2.webp?fit=80%2C80&ssl=1" alt=""><span>React</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/angular-2-1.webp?fit=80%2C80&ssl=1" alt="">Angular</div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/node-js-2.webp?fit=80%2C80&ssl=1" alt=""><span>Node.js</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/laravel-1.webp?fit=80%2C80&ssl=1" alt=""><span>Laravel</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/js-1-1.webp?fit=80%2C80&ssl=1" alt=""><span>JavaScript</span></div>
+        </div>
+      </div>
+      <div class="box" id="box4"><a class="sub_cont">UI/UX Design</a><p class="sub_cont2">
+          Propel your business scale by harmonizing development and operational jobs to build the best quality products and solutions within the shortest time and gain a competitive advantage with our strategic and outstanding DevOps services.
+        </p>
+      <div class="service_box">
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/Jenkins-1-1.webp?fit=80%2C80&ssl=1" alt=""><span>Jenkins</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/docker-1-1.webp?fit=80%2C80&ssl=1" alt="">Docker</div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/git-1.webp?fit=80%2C80&ssl=1" alt=""><span>Git</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/ansible-1.webp?fit=80%2C80&ssl=1" alt=""><span>Ansible</span></div>
+          <div class="icon-item"><img src="https://i0.wp.com/inextrix.com/wp-content/uploads/2025/10/kubernetes-1-1.webp?fit=80%2C80&ssl=1" alt=""><span>Kubernetes</span></div>
+        </div></div>
+
+     
+    
+  </body>
+</html>

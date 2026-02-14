@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      section {
+        /* border: 1px solid; */
+        height: 100vh;
+        width: 87%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transition: all 10s linear;
+      }
+      .parent {
+        height: 500px;
+        width: 400px;
+        background-color: white;
+        /* border: 1px solid; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .box {
+        height: 300px;
+        width: 300px;
+        /* border: 1px solid; */
+        background-color: white;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .parent:hover img {
+        transition: all 0.5s linear;
+        transform: scale(1.4);
+      }
+      #p1 {
+        background-color: #fee6f4;
+        box-shadow: #f9b3dd 0px -5px 0px inset;
+      }
+      #p2 {
+        background-color: #e6dcfd;
+        box-shadow: #d1bcf9 0px -5px 0px inset;
+      }
+      #p3 {
+        background-color: #ffebda;
+        box-shadow: #ffd1ac 0px -5px 0px inset;
+      }
+      #p1:hover {
+        background-color: #f9b3dd;
+      }
+      #p2:hover {
+        background-color: #d1bcf9;
+      }
+      #p3:hover {
+        background-color: #ffd1ac;
+      }
+
+      img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+      h2,
+      p {
+        /* border: 1px solid; */
+        align-self: flex-start;
+        margin-left: 55px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="parent" id="p1">
+        <h2>Real esate</h2>
+        <p>Enterprise, Process Automation</p>
+        <div class="box" id="box1">
+          <img
+            src="https://notionmind.com/_next/static/media/Conrex.53da3d7f.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="parent" id="p2">
+        <h2>Facility Management</h2>
+        <p>Enterprise, Solution</p>
+        <div class="box" id="box2">
+          <img
+            src="https://notionmind.com/_next/static/media/abad.862315ac.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="parent" id="p3">
+        <h2>Healthcare</h2>
+        <p>Enterprise, Digital Transformation</p>
+        <div class="box" id="box3">
+          <img
+            src="https://notionmind.com/_next/static/media/Alcon.f81de2a4.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

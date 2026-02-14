@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1::first-letter {
+        color: red;
+        font-size: 50px;
+      }
+      p::first-line {
+        color: teal;
+        font-size: 30px;
+      }
+      p::first-letter {
+        color: green;
+        font-size: 30px;
+      }
+      #para::after {
+        content: "This is after content";
+        color: red;
+      }
+      #para::before {
+        content: "This is before content";
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>5 . Pesudo Element Selector ( :: )</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, atque.</p>
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, sit.
+      Architecto temporibus hic pariatur quibusdam sequi minus, cum ipsum?
+      Perferendis!
+    </p>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>select form elements -- dropdown list in html</h1>
+    <form action="">
+      <label for="skill">Select Skills:</label>
+      <select name="Skill" id="skill" multiple size="1">
+        <option value="" disabled selected>--Select any one skill--</option>
+        <optgroup label="Frontend">
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JS">JS</option>
+          <option value="Tailwind Css">Tailwind Css</option>
+        </optgroup>
+        <optgroup label="Backend">
+          <option value="PHP">PHP</option>
+          <option value="Node">Node</option>
+          <option value="Python">Python</option>
+        </optgroup>
+        <optgroup label="Database">
+          <option value="SQl">SQl</option>
+          <option value="MongoDB">MongoDB</option>
+        </optgroup>
+      </select>
+      <input type="submit" value="Submit" />
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

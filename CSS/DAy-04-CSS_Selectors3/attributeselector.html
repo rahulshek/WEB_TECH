@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1. Targeting by thier attribute name */
+      input[type] {
+        background-color: yellow;
+      }
+      /* 2. exact value */
+      input[type="password"] {
+        border: 2px solid blue;
+        background-color: red;
+      }
+      /* 3. Target the word present inside anywhere in the attribute value */
+      a[href*="qspider"] {
+        text-decoration: none;
+        background-color: aqua;
+        color: yellow;
+      }
+      /* 4.  The exact word is present inside the entire attribute value */
+      button[class~="btn"] {
+        background-color: gray;
+        padding: 8px 10px;
+        font-size: 20px;
+        color: white;
+      }
+      .primary {
+        border: 2px solid red;
+      }
+      /* 5. ending with value */
+      img[src$="png"] {
+        border: 2px solid saddlebrown;
+      }
+      img[src$="jpg"] {
+        border: 2px solid slateblue;
+      }
+      /* 6. starting value */
+      p[class^="first"] {
+        background-color: skyblue;
+      }
+      p[class^="second"] {
+        background-color: salmon;
+      }
+      /* 7. hyphen value */
+      p[class|="en"] {
+        border: 2px solid rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Attribute Selector</h1>
+    <h2>Input elements</h2>
+    <input type="text" placeholder="Enter Your name" />
+    <input type="email" name="" id="" placeholder="Enter you email" />
+    <input type="password" name="" placeholder="Enter Your password" />
+    <br /><br />
+    <!-- Links  -->
+    <a href="https://www.google.com">google</a>
+    <a href="https://www.facebook.com">facebook</a>
+    <a href="https://www.qspiders.com">qspider</a>
+    <br /><br />
+    <!-- Buttons -->
+    <button class="btn primary">primary</button>
+    <button class="btn secondary">Secondary</button>
+    <br /><br />
+    <!-- Images -->
+    <img src="banner.jpg" alt="banner" />
+    <img src="logo.png" alt="logo" />
+    <br /><br />
+    <p class="first para">First Paragrahh</p>
+    <p class="second para">second Paragrahh</p>
+    <br /><br />
+    <p class="en-IN">Namaste India</p>
+    <p class="en">Hello</p>
+    <p class="en-fr">Bonjour</p>
+    <p class="sp-en">Ciao</p>
+    <p class="jp">kinnichwa</p>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input:enabled {
+        background-color: yellow;
+      }
+      input:disabled {
+        cursor: not-allowed;
+      }
+      input:checked {
+        accent-color: red;
+      }
+      input[type="radio"] {
+        accent-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>UI Element Selector</h1>
+    <div>
+      <label for="">Username :</label>
+      <input type="text" placeholder="Enter Username" />
+    </div>
+    <br />
+    <div>
+      <label for="">Admin :</label>
+      <input type="text" disabled placeholder="Not Allowed" />
+    </div>
+    <br />
+    <div>
+      <label for="">
+        <input type="checkbox" checked name="" id="" /> I accept terms and
+        conditions
+      </label>
+    </div>
+    <br />
+    <div>
+      <label for="">
+        <input type="radio" name="" checked id="" />
+      </label>
+    </div>
+  </body>
+</html>

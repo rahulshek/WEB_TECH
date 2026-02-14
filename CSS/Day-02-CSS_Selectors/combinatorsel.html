@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div p {
+        color: red;
+        background-color: yellow;
+      }
+      section > p {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Combinators Selectors</h1>
+    <h2>1. Descedent Selector</h2>
+    <div>
+      <h1>Heading-1</h1>
+      <p>Paragraph-1</p>
+      <main>
+        <h1>Heading-2</h1>
+        <p>Paragraph-2</p>
+        <article>
+          <p>Paragraph-3</p>
+        </article>
+      </main>
+    </div>
+    <section>
+      <p>This Paragraph is inside the section</p>
+    </section>
+  </body>
+</html>

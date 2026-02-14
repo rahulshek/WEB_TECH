@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1><mark>Student Registration Form</mark></h1>
+    </center>
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <table>
+          <tr>
+            <td><label for="firstname">Firstname :</label></td>
+            <td>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Enter Your Firstname"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="lastname">Lastname :</label></td>
+            <td>
+              <input
+                type="text"
+                name="lastname"
+                id=""
+                placeholder="Enter Your Lastname"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Email</label></td>
+            <td>
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter Your email"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="tel">Phone Number</label></td>
+            <td>
+              <input
+                type="tel"
+                name="tel"
+                id=""
+                placeholder="Enter Your Number"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dob">DOB: </label></td>
+            <td><input type="date" name="dob" id="dob" /></td>
+          </tr>
+          <tr>
+            <td><label for="">Gender</label></td>
+            <td>
+              <label for="Male"
+                ><input type="radio" name="Gender" id="Male" />Male</label
+              >
+              <label for="Female"
+                ><input type="radio" name="Gender" id="Female" />Female</label
+              >
+              <label for="other"
+                ><input type="radio" name="Gender" id="other" />Other</label
+              >
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Academic Information</legend>
+        <table>
+          <tr>
+            <td><label for="">Select Course : </label></td>
+            <td>
+              <select name="" id="" required>
+                <option value="" disabled selected>--Select Course--</option>
+                <option value="">Python Full Stack</option>
+                <option value="">Java Full Stack</option>
+                <option value="">FrontEnd</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">Skills :</label></td>
+            <td>
+              <input
+                type="text"
+                list="skill"
+                placeholder="Select or type a skill"
+                required
+              />
+              <datalist id="skill">
+                <option value="HTML"></option>
+                <option value="CSS"></option>
+                <option value="JavaScript"></option>
+                <option value="React"></option>
+                <option value="Node"></option>
+                <option value="MongoDB"></option>
+                <option value="Java"></option>
+                <option value="Python"></option>
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="address">Address :</label></td>
+            <td><textarea name="address" id="address" rows="2"></textarea></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Login Credentials</legend>
+        <table>
+          <tr>
+            <td><label for="Username">Username : </label></td>
+            <td><input type="text" name="Username" id="" required /></td>
+          </tr>
+          <tr>
+            <td><label for="">Password :</label></td>
+            <td>
+              <input type="password" name="password" id="password" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for=""> Confirm Password :</label></td>
+            <td>
+              <input
+                type="confirmpassword"
+                name="confirmpassword"
+                id="confirmpassword"
+                required
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Declaration</legend>
+        <table>
+          <tr>
+            <td>
+              <input type="checkbox" name="" id="" required />I agree to the
+              Terms & Condtion
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <input type="submit" value="submit" />
+              <input type="reset" value="Reset" />
+            </th>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>
+
+<!--  -->

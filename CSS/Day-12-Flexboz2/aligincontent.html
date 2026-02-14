@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: monospace;
+      }
+      body{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .parent{
+        width: 450px;
+        height: 450px;
+        background-color: tomato;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: space-evenly;
+        /* align-content: space-around; */
+        /* align-content: space-between; */
+        /* align-content: center ; */
+
+      }
+      .child{
+        width: 100px;
+        height: 100px;
+        background-color: teal;
+        color: ivory;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+
+      }
+      h1{
+        margin-bottom: 50px;
+        font-size: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Align- Content property</h1>
+    <div class="parent">
+      <div class="child" id="child1">child-1</div>
+      <div class="child" id="child2">child-2</div>
+      <div class="child" id="child3">child-3</div>
+      <div class="child" id="child4">child-4</div>
+      <div class="child" id="child5">child-5</div>
+      <div class="child" id="child6">child-6</div>
+      <div class="child" id="child7">child-7</div>
+      <div class="child" id="child8">child-8</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      #content{
+        width: 200px;
+        height: 60px;
+        border: 1px solid transparent;
+        font-size: 25px;
+        margin-top: 20px;
+        margin-left: 20px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        box-shadow: rgb(0,0,0,0.1)0px 4px 12px;
+        background-color: greenyellow;
+        position: relative;
+      }
+      span{
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+        padding: 5px;
+        background-color: crimson;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        right: -20px;
+        top: -15px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Notification Task</h1>
+    <div id="content">
+      WhatsApp
+      <span>50+</span>
+    </div>
+  </body>
+</html>
