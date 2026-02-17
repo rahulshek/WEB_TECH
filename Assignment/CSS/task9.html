@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descript Cards</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        background-color: #1a0f0f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 40px;
+      }
+      .h {
+        position: relative;
+        height: 500px;
+        width: 300px;
+        background-color: #2a1b1b;
+        border-radius: 16px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        /* transition: transform 0.3s ease; */
+      }
+
+      .h:hover {
+        transform: translateY(-5px);
+      }
+
+      h2 {
+        position: absolute;
+        top: 24px;
+        left: 20px;
+        color: white;
+        z-index: 3;
+        font-size: 1.5rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+      }
+
+      .parent {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 80px 24px 24px 24px;
+        display: flex;
+        align-items: flex-start;
+        z-index: 1;
+      }
+
+      p {
+        color: #e0e0e0;
+        font-size: 16px;
+        line-height: 1.5;
+        transform: translateY(20px);
+      }
+
+      .box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        z-index: 2;
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .box {
+        position: absolute;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.6) 0%,
+          rgba(0, 0, 0, 0) 40%
+        );
+        background-size: cover;
+        background-position: center;
+      }
+
+      .h:hover .box {
+        transform: translateY(180px) scale(0.95);
+        border-radius: 16px 16px 0 0;
+      }
+
+      .h:hover p {
+        transform: translateY(0);
+      }
+
+      #b1 {
+        background-image: url(https://cdn.builder.io/api/v1/image/assets%2Ffcea5005d671451e9b07839c893228d0%2F120d1e8147d7419199b04dbed7888a2b);
+        /* background-size: cover;
+        background-position: center; */
+      }
+      #b2 {
+        background-image: url(https://cdn.builder.io/api/v1/image/assets%2Ffcea5005d671451e9b07839c893228d0%2F366555915c984b1eb87c6597c416a6f5);
+        /* background-size: cover;
+        background-position: center; */
+      }
+      #b3 {
+        background-image: url(https://cdn.builder.io/api/v1/image/assets%2Ffcea5005d671451e9b07839c893228d0%2Fb537d3eea233499988fe39fb7db07bd8);
+        /* background-size: cover;
+        background-position: center; */
+      }
+      #b4 {
+        background-image: url(https://cdn.builder.io/api/v1/image/assets%2Ffcea5005d671451e9b07839c893228d0%2F97b43f3cd1904644b27e66b5d96f1b3d);
+        /* background-size: cover;
+        background-position: center; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="h" id="d1">
+      <h2>Marketing</h2>
+      <div class="parent">
+        <p>Product launch and how-to videos to get people to buy your stuff.</p>
+      </div>
+      <div class="box" id="b1"></div>
+    </div>
+
+    <div id="d2" class="h">
+      <h2>Learning & Development</h2>
+      <div class="parent">
+        <p>
+          Internal training videos that your team will actually pay attention
+          to.
+        </p>
+      </div>
+      <div class="box" id="b2"></div>
+    </div>
+
+    <div class="h" id="d3">
+      <h2>Sales Enablement</h2>
+      <div class="parent">
+        <p>
+          Sales training videos that help your team turn cold leads into warm
+          bags of money.
+        </p>
+      </div>
+      <div class="box" id="b3"></div>
+    </div>
+
+    <div id="d4" class="h">
+      <h2>Support</h2>
+      <div class="parent">
+        <p>
+          Help videos that engage your customers before they get mad enough to
+          cancel.
+        </p>
+      </div>
+      <div class="box" id="b4"></div>
+    </div>
+  </body>
+</html>

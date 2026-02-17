@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .scroller {
+        width: 100%;
+        padding: 20px 0px;
+        background-color: #f4f4f4;
+        overflow: hidden;
+      }
+      .scroller-track {
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        animation: box-scroller 10s linear infinite;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        margin: 0px 40px;
+        border-radius: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-color: white;
+      }
+      #box1 {
+        background-image: url(./download.svg);
+      }
+      #box2 {
+        background-image: url(./download\ \(1\).svg);
+      }
+      #box3 {
+        background-image: url(./download\ \(3\).svg);
+      }
+      #box4 {
+        background-image: url(./download\ \(2\).svg);
+      }
+      #box5 {
+        background-image: url(./download\ \(4\).svg);
+      }
+      .scroller-track:hover {
+        animation-play-state: paused;
+      }
+      @keyframes box-scroller {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroller">
+      <div class="scroller-track">
+        <!--! 1st set -->
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+        <!--! 2st set -->
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+      </div>
+    </div>
+  </body>
+</html>
