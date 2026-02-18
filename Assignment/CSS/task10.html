@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q Landing Page Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* --- RESET & BASE STYLES --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f3f4f6; /* Light grey background */
+        color: #111;
+        overflow-x: hidden; /* Prevent horizontal scroll due to absolute positioning */
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* --- NAVBAR --- */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        background: transparent;
+        position: absolute;
+        width: 60%; /* Only span the left side initially so it doesn't overlap image awkwardly */
+        z-index: 10;
+        top: 0;
+        left: 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-box {
+        font-size: 24px;
+        font-weight: 700;
+        color: #d97706; /* Orange accent */
+        background: #fff;
+        border: 1px solid #ddd;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px; /* Slight rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-links li a {
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+        transition: color 0.2s;
+      }
+
+      .nav-links li a:hover {
+        color: #000;
+      }
+
+      .nav-auth {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      /* --- HERO SECTION LAYOUT --- */
+      .hero-container {
+        display: flex;
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+      }
+
+      /* --- LEFT CONTENT --- */
+      .content-left {
+        width: 55%; /* Takes up left half */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 60px;
+        padding-right: 40px;
+        z-index: 2; /* Sit above image background if overlap */
+      }
+
+      /* Announcement Pill */
+      .announcement-pill {
+        display: inline-flex;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 12px;
+        color: #555;
+        width: fit-content;
+        margin-bottom: 30px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        max-width: 100%;
+      }
+
+      .announcement-pill .pill-text {
+        margin-right: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .announcement-pill a {
+        color: #2563eb; /* Blue link */
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      /* Headlines */
+      h1 {
+        font-size: 56px; /* Large bold text */
+        line-height: 1.1;
+        font-weight: 800;
+        color: #000;
+        margin-bottom: 30px;
+        letter-spacing: -1px;
+      }
+
+      /* Grey Description Box */
+      .description-box {
+        background: #e5e7eb; /* The darker grey box from design */
+        padding: 24px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        max-width: 90%;
+      }
+
+      .description-box p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #374151;
+      }
+
+      /* CTA Buttons */
+      .cta-group {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .btn-primary {
+        background-color: #1d72e8; /* Google Blue */
+        color: #fff;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        box-shadow: 0 2px 4px rgba(29, 114, 232, 0.3);
+      }
+
+      .btn-primary:hover {
+        background-color: #1557b0;
+      }
+
+      .link-secondary {
+        color: #111;
+        font-weight: 600;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .link-secondary:hover {
+        text-decoration: underline;
+      }
+
+      /* --- RIGHT IMAGE (DIAGONAL CUT) --- */
+      .image-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 55%; /* Overlaps slightly */
+        background: url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80")
+          no-repeat center center/cover;
+
+        /* The diagonal slash effect */
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: 1;
+      }
+      @media (max-width: 900px) {
+        .navbar {
+          width: 100%;
+          position: relative;
+          padding: 20px;
+        }
+        /* .nav-links {
+          display: none;
+        } Hide links on mobile */
+
+        .hero-container {
+          flex-direction: column;
+        }
+
+        .content-left {
+          width: 100%;
+          padding: 40px 20px;
+          /* order: 2; Content below image on mobile usually, or keep top */
+        }
+
+        .image-right {
+          position: relative;
+          width: 100%;
+          height: 300px;
+          /* clip-path: none; Remove diagonal on mobile */
+          order: 1;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+        .description-box {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-container">
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-box">Q</div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Company</a></li>
+        </ul>
+        <div class="nav-auth">
+          <a href="#">Log in</a>
+        </div>
+      </nav>
+
+      <div class="content-left">
+        <div class="announcement-pill">
+          <span class="pill-text"
+            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga,
+            quod.</span
+          >
+          <a href="#">Read More </a>
+        </div>
+
+        <h1>Data to enrich your<br />online business</h1>
+
+        <div class="description-box">
+          <p>
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Et repellendus impedit aliquid placeat debitis
+            lat?consectetur adipisicing elit. Ex amet repellat, alias et ea
+            similique modi repellendus pariatur iure sint?
+          </p>
+        </div>
+
+        <div class="cta-group">
+          <button class="btn-primary">Get Started</button>
+          <a href="#" class="link-secondary">Learn More </a>
+        </div>
+      </div>
+
+      <div class="image-right"></div>
+    </div>
+  </body>
+</html>
