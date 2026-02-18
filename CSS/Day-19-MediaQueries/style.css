@@ -43,6 +43,7 @@ header nav ul{
 header nav ul li{
     list-style: none;
     margin: 0px 20px;
+    /* font-size: 14px; */
 }
 header nav ul li a{
     text-decoration: none;
@@ -50,6 +51,8 @@ header nav ul li a{
     font-size: 20px;
 }
 button{
+    width: 104px;
+    height: 37.5px;
     border-radius: 20PX;
     background-color: black;
     color: ivory;
@@ -62,17 +65,45 @@ main{
     display: flex;
     height: 80vh;
     background-color:#F7F4ED ;  
-
 }
 main article{
-    width: 50vw;
-    /* border: 1px solid #000;   */
+    width: 60vw;
+    border: 1px solid #000;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main article h1{
+    font-size: 80px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+}
+main article p{
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+main article button{
+    width: 104px;
+    height: 37.5px;
+    border-radius: 20PX;
+    background-color: black;
+    color: ivory;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
 }
 main aside{
-    width: 50vw;
+    width: 40vw;
     height: 80vh;
     display: flex;
     justify-content: end;
+    overflow: hidden;
+}
+main aside img{
+    height: 105%;
+    margin-top: 15px;
 }
 footer{
     height: 10vh;
@@ -90,4 +121,19 @@ footer ul{
 }
 footer ul li{
     list-style:none ;
+}
+
+@media screen  and (max-width: 720px ){
+    header{
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px;
+    height: 15vh;
+    }
+    header nav {
+    width: 200px;
+  }
+   nav > ul {
+    display: none;
+  } 
 }
