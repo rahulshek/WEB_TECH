@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+      .box {
+        width: 600px;
+        height: 600px;
+        background-color: yellowgreen;
+        /* clip-path: polygon(50% 0% , 100% 100% , 0% 100%); */
+        /* clip-path: polygon(
+          0% 0%,
+          0% 100%,
+          25% 100%,
+          25% 25%,
+          75% 25%,
+          75% 75%,
+          25% 75%,
+          25% 100%,
+          100% 100%,
+          100% 0%
+        ); */
+        clip-path: polygon(
+          40% 0%,
+          40% 20%,
+          100% 20%,
+          100% 80%,
+          40% 80%,
+          40% 100%,
+          0% 50%
+        );
+        background-image: url("https://cdn.pixabay.com/photo/2016/11/21/06/53/beautiful-natural-image-1844362_1280.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Clip Path property in CSS</h1>
+    <div class="box"></div>
+  </body>
+</html>

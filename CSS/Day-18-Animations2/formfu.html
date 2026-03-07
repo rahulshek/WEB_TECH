@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      form {
+        width: 30%;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 50px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+        margin-bottom: 20px;
+        background-color: white;
+      }
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid gray;
+        background-color: #f4f4f4;
+      }
+      .form-group input:focus {
+        border: 2px solid green;
+      }
+      button {
+        width: 50%;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: indigo;
+        color: white;
+        border: 0px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.1s linear;
+      }
+
+      /* button:hover {
+        transform: scale(0.9);
+      } */
+      .form-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Angry Login Button Task 😡🤬</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="text" id="password" placeholder="Enter your password" />
+      </div>
+      <div class="form-button">
+        <button type="button" id="btn">Login</button>
+      </div>
+    </form>
+    <script>
+      let loginBtn = document.getElementById("btn");
+
+      loginBtn.addEventListener("mouseover", () => {
+        let name = document.getElementById("name").value;
+        let password = document.getElementById("password").value;
+        if (name == "" || password == "") {
+          let x = Math.floor(Math.random() * 300 - 100);
+          let y = Math.floor(Math.random() * 300 - 100);
+          console.log(x, y);
+          loginBtn.style.transform = `translate(${x}px, ${y}px)`;
+          loginBtn.style.backgroundColor = "red";
+          loginBtn.style.width = "100%";
+          loginBtn.textContent = "Bro Please fill the value first🤬";
+        } else {
+          alert("Login Successfully");
+          loginBtn.style.backgroundColor = "green";
+          loginBtn.textContent = "Ab Login kr skta hai tu👍";
+        }
+      });
+    </script>
+  </body>
+</html>
