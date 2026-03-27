@@ -5,7 +5,7 @@ console.log("Advanced Function");
 // * A function which will accept another function as a parameter and return a function is called Higher Order Function
 
 // ! HOF -> calculate
-
+ 
 function calculater(num1,num2,applyfunction) {
     return applyfunction(num1,num2);
 }
