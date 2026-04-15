@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: azure;
+}
+.header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    padding: 10px;
+    position: relative;
+
+}
+.parent{
+    height: 88vh;
+    width: 50%;
+    border-radius: 4px;
+    /* box-shadow: 0 0 5px #111; */
+    /* border: 1px solid orange; */
+    /* margin: 10vh auto; */
+    overflow: scroll;
+    padding: 30px;
+    background-color: indianred;
+    position: relative;
+}    
+::-webkit-scrollbar{
+    display: none;
+}
+.boxcrt{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.leftBox,
+.rightBox{
+    height: 50px;
+    width: 30%;
+    border: 1px solid green;
+    display: flex; 
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    
+   
+}
+.leftBox{
+   align-self: flex-start;
+   justify-content: start;
+    align-items: center;
+     border-radius: 5px 5px 5px 0px;
+     background-color:white;
+}
+.rightBox{
+    align-self: flex-end;
+    justify-content: end;
+    align-items: center;
+     border-radius: 5px 5px 0px 5px;
+     background-color: ivory;
+    
+}
+.leftBox img, .rightBox img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.leftBox img{
+    position: absolute;
+    left: -35px;
+    bottom: -10px;
+}
+.rightBox img{
+    position: absolute;
+    right:-35px;
+    bottom: -10px;
+}
+.typer{
+    width: 49%;
+    height: 50px;
+    border: 1px solid peru;
+    border-radius: 5px  ;
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+    background-color: rgb(227, 224, 224);
+    /* position: fixed;  */
+    position: absolute;
+    bottom:42px;
+    
+}
+.cam{
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.msg{
+    width: 60%;
+    height: 100%;
+    /* border: 1px solid orange; */
+}
+.log{
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cam i{
+    font-size: 20px;
+    color: rgb(140, 137, 137);
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+}
+.msg input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 0 10px;
+    background: transparent;
+}
+.log i{
+    font-size: 20px;
+    /* color: green; */
+    color: rgb(140, 137, 137);
+}
