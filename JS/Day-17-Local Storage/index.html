@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="flex items-center justify-center h-screen bg-gray-100">
+    <form
+      action=""
+      method="get"
+      class="flex flex-col gap-4 border p-4 rounded bg-orange-100 shadow-md w-80 h-100 justify-center"
+      id="loginForm"
+    >
+      <label for="un" class="font-medium">UserName:</label>
+      <input
+        type="text"
+        id="un"
+        name="username"
+        required
+        class="border p-2 rounded bg-white"
+      />
+      <label for="pw" class="font-medium">Password:</label>
+      <input
+        type="password"
+        id="pw"
+        name="password"
+        required
+        class="border p-2 rounded bg-white"
+      />
+      <button
+        type="reset"
+        class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-700"
+      >
+        Cancel
+      </button>
+      <button
+        type="submit"
+        class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+      >
+        Submit
+      </button>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>

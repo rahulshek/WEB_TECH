@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button id="btn">Click Me</button> -->
+
+    <input type="submit" value="Submit" id="btn" />
+    <input type="text" id="inp" />
+    <script>
+      let btn = document.getElementById("btn");
+      //   console.log(btn);
+      btn.addEventListener("click", function () {
+        console.log("Button was clicked!");
+      });
+
+      let inp = document.getElementById("inp");
+      inp.addEventListener("focus", function () {
+        console.log("Input focused: " + inp.value);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./myntra.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><img src="./download.jpeg" alt="" /></li>
+        <li><a class="men" href="#">MEN</a></li>
+        <li><a class="men" href="#">WOMEN</a></li>
+        <li><a class="men" href="#">KIDS</a></li>
+        <li><a class="men" href="#">HOME</a></li>
+        <li><a class="men" href="#">BEAUTY</a></li>
+        <li><a href="#" class="men">GENZ</a></li>
+        <li>
+          <div class="upper">
+            <a href="#">STUDIO <span>NEW</span></a>
+          </div>
+        </li>
+        <li>
+          <div id="parent">
+            <i id="search" class="fa-solid fa-magnifying-glass"></i
+            ><input
+              type="text"
+              class="input"
+              placeholder="Search for products, brands and more"
+            />
+          </div>
+        </li>
+        <li>
+          <div>
+            <i class="fa-solid fa-circle-user"></i>
+            <h1>profile</h1>
+          </div>
+        </li>
+        <li>
+          <div>
+            <i class="fa-solid fa-heart"></i>
+            <h1>wishlist</h1>
+          </div>
+        </li>
+        <li>
+          <div>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h1>bag</h1>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="main">
+      <div class="child-1">
+        <h1>Topwear</h1>
+        <p>T-Shirts</p>
+        <p>Casual Shirts</p>
+        <p>Formal Shirts</p>
+        <p>Sweatshirts</p>
+        <p>Sweaters</p>
+        <p>Jackets</p>
+        <p>Blazers & Coats</p>
+        <p>Suits</p>
+        <p>Rain Jackets</p>
+        <hr />
+        <h1>Indian & Festive Wear</h1>
+        <p>Kurtas & Kurta Sets</p>
+        <p>Sherwanis</p>
+        <p>Nehru Jackets</p>
+        <p>Dhotis</p>
+      </div>
+      <div class="child-2">
+        <h1>Topwear</h1>
+        <p>T-Shirts</p>
+        <p>Casual Shirts</p>
+        <p>Formal Shirts</p>
+        <p>Sweatshirts</p>
+        <p>Sweaters</p>
+        <p>Jackets</p>
+        <p>Blazers & Coats</p>
+        <p>Suits</p>
+        <p>Rain Jackets</p>
+        <hr />
+        <h1>Indian & Festive Wear</h1>
+        <p>Kurtas & Kurta Sets</p>
+        <p>Sherwanis</p>
+        <p>Nehru Jackets</p>
+        <p>Dhotis</p>
+      </div>
+      <div class="child-3">
+        <h1>Topwear</h1>
+        <p>T-Shirts</p>
+        <p>Casual Shirts</p>
+        <p>Formal Shirts</p>
+        <p>Sweatshirts</p>
+        <p>Sweaters</p>
+        <p>Jackets</p>
+        <p>Blazers & Coats</p>
+        <p>Suits</p>
+        <p>Rain Jackets</p>
+        <hr />
+        <h1>Indian & Festive Wear</h1>
+        <p>Kurtas & Kurta Sets</p>
+        <p>Sherwanis</p>
+        <p>Nehru Jackets</p>
+        <p>Dhotis</p>
+      </div>
+      <div class="child-4">
+        <h1>Topwear</h1>
+        <p>T-Shirts</p>
+        <p>Casual Shirts</p>
+        <p>Formal Shirts</p>
+        <p>Sweatshirts</p>
+        <p>Sweaters</p>
+        <p>Jackets</p>
+        <p>Blazers & Coats</p>
+        <p>Suits</p>
+        <p>Rain Jackets</p>
+        <hr />
+        <h1>Indian & Festive Wear</h1>
+        <p>Kurtas & Kurta Sets</p>
+        <p>Sherwanis</p>
+        <p>Nehru Jackets</p>
+        <p>Dhotis</p>
+      </div>
+      <div class="child-5">
+        <h1>Topwear</h1>
+        <p>T-Shirts</p>
+        <p>Casual Shirts</p>
+        <p>Formal Shirts</p>
+        <p>Sweatshirts</p>
+        <p>Sweaters</p>
+        <p>Jackets</p>
+        <p>Blazers & Coats</p>
+        <p>Suits</p>
+        <p>Rain Jackets</p>
+        <hr />
+        <h1>Indian & Festive Wear</h1>
+        <p>Kurtas & Kurta Sets</p>
+        <p>Sherwanis</p>
+        <p>Nehru Jackets</p>
+        <p>Dhotis</p>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <section class="bg-gray-100 p-8">
+      <div
+        x-data="{ activeSlide: 0, slides: 3, timer: null }"
+        x-init="timer = setInterval(() => activeSlide = (activeSlide + 1) % slides, 3000)"
+        class="max-w-3xl mx-auto relative group"
+      >
+        <div class="relative overflow-hidden rounded-lg shadow-xl">
+          <div
+            class="flex transition-transform duration-500 ease-in-out"
+            :style="`transform: translateX(-${activeSlide * 100}%)`"
+          >
+            <!-- <div class="min-w-full h-64 bg-blue-500 flex items-center justify-center text-white text-4xl">1</div>
+                <div class="min-w-full h-64 bg-green-500 flex items-center justify-center text-white text-4xl">2</div>
+                <div class="min-w-full h-64 bg-purple-500 flex items-center justify-center text-white text-4xl">3</div> -->
+            <img
+              src="./image.png"
+              alt=""
+              class="min-w-full h-64 object-cover"
+            />
+            <img
+              src="./image copy.png"
+              alt=""
+              class="min-w-full h-64 object-cover"
+            />
+            <img
+              src="./image copy 2.png"
+              alt=""
+              class="min-w-full h-64 object-cover"
+            />
+          </div>
+        </div>
+
+        <button
+          @click="activeSlide = (activeSlide - 1 + slides) % slides; clearInterval(timer)"
+          class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2.5 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+
+        <button
+          @click="activeSlide = (activeSlide + 1) % slides; clearInterval(timer)"
+          class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2.5 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+          <template x-for="i in slides" :key="i">
+            <button
+              @click="activeSlide = i - 1; clearInterval(timer)"
+              class="w-3 h-3 rounded-full transition-colors"
+              :class="activeSlide === i - 1 ? 'bg-white' : 'bg-white/50'"
+            ></button>
+          </template>
+        </div>
+      </div>
+      <script
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+        defer
+      ></script>
+    </section>
+
+    <script>
+      let men = document.querySelectorAll(".men");
+      let main = document.getElementById("main");
+
+      men.forEach((i) => {
+        i.addEventListener("mouseover", () => {
+          main.style.visibility = "visible";
+        });
+
+        i.addEventListener("mouseleave", () => {
+          main.style.visibility = "hidden";
+        });
+      });
+
+      main.addEventListener("mouseleave", () => {
+        main.style.visibility = "hidden";
+      });
+    </script>
+  </body>
+</html>
