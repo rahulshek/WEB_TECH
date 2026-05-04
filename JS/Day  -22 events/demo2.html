@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" placeholder="Enter name" class="un" />
+      <button>Log in</button>
+    </form>
+    <script>
+      let username = "rahul";
+      let un = document.querySelector(".un");
+      un.addEventListener("change", (e) => {
+        console.log(e);
+        if (e.target.value === username) {
+          alert("valid");
+        } else {
+          alert("invalid");
+        }
+      });
+    </script>
+  </body>
+</html>

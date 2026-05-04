@@ -1,9 +1,11 @@
+let products = [];
 async function fetchData(api) {
     let response= await fetch(api);
     try {
         let data = await response.json();
         // console.log(data);
-        displayData(data.products); // []
+        products = data.products; // []
+        displayData(products); // []
         
 
     }
@@ -18,7 +20,7 @@ fetchData("https://dummyjson.com/products");
 
 function displayData(arr){
     let input = "";
-    console.log(arr);
+    // console.log(arr);
     arr.map((val)=>{
         // console.log(val);
         let image_url = val.thumbnail;
@@ -27,8 +29,9 @@ function displayData(arr){
         let price = val.price;
         let rating = val.rating;
         let total_reviews = val.reviews.length;
+       let discount = val.discountPercentage;
         input += `
-        <div class="max-w-md w-full">
+        <div class="max-w-md w-full" onclick="productDetails(${val.id})">
   <div
     class="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl">
     <div class="relative">
@@ -36,7 +39,8 @@ function displayData(arr){
       <img src=${image_url} alt="Product Image" class="w-full h-64 object-contain object-center relative z-10">
       <div
         class="absolute top-4 right-4 bg-gray-100 text-xs font-bold px-3 py-2 rounded-full z-20 transform rotate-12">
-        NEW</div>
+        ${discount}% OFF
+      </div>
     </div>
     <div class="p-6">
       <h2 class="text-3xl font-extrabold text-gray-800 mb-2">${title.split(" ").slice(0, 3).join(" ")}</h2>
@@ -67,3 +71,19 @@ function displayData(arr){
     product_section.innerHTML = input;
     // console.log(input);
 }
+
+function productDetails(id){
+  // console.log(id);
+    localStorage.setItem("productid", id);
+    window.location.href = "productdetails.html";
+  }
+
+let searchCnt = document.querySelector("#search-navbar");
+searchCnt.addEventListener("input", (e)=>{
+    console.log(e.target.value);
+    // console.log(products);
+    let result = products.filter((val)=>{
+        return val.title.toUpperCase().includes(e.target.value.toUpperCase());
+    })
+    displayData(result);
+})
