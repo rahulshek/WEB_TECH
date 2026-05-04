@@ -13,6 +13,6 @@ let calBil = (day)=>{
     }
     console.log(totalBill);
 }
-
+    
 let stayDay = prompt("Enter the total number of day's : ")
 calBil(stayDay)
