@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = [10, 20, 30, 40, 50];
+      let [a, b] = num;
+      console.log(a);
+      console.log(b);
+      let [, , c] = num;
+      console.log(c);
+
+      let user = {
+        Sname: "Rahul",
+        course: "PFS",
+        iscomplete: "False",
+        1: "one",
+        2: "two",
+      };
+
+      let { Sname, course } = user;
+      console.log(Sname);
+      console.log(course);
+      console.log(user.iscomplete); // we can access the property of object by using dot notation also
+      console.log(user["iscomplete"]); // we can access the property of object by using bracket notation also
+
+      //   Add date of join property in user object and assign it to 2020
+      user["date-of-join"] = "20 May";
+      console.log(user);
+
+      console.log(user["2"]); // we can access the property of object by using bracket notation also
+
+      let a1 = [10, 20];
+      let a2 = [20, 20];
+      let a3 = a1.concat(a2);
+      console.log(a3);
+      // rest and spread operator
+      let a4 = [...a1, ...a2]; // it is used to merge two arrays and it is also used to copy an array
+      console.log(a4);
+      let o1 = {
+        name: "Rahul",
+        course: "PFS",
+      };
+      let o2 = {
+        name: "Rahul",
+        course: "PFS",
+      };
+      let o3 = { ...o1, ...o2 }; // it is used to merge two objects and it is also used to copy an object
+      console.log(o3);
+
+      let arr = [10, 20, 30, 40, 50];
+      let [x, ...z] = arr;
+      console.log(x);
+      console.log(z);
+
+      let obj = {
+        name: "Rahul",
+        course: "PFS",
+        iscomplete: "False",
+      };
+      let { name, ...r } = obj;
+      console.log(name);
+      console.log(r);
+
+      //   nested object
+      let users = {
+        un: "abc",
+        course: {
+          names: "PFS",
+          sub: ["HTML", "CSS", "JS", "python"],
+          getjob: false,
+          mockdetails: {
+            pre: 1,
+            final: "*",
+          },
+        },
+      };
+
+      let {
+        course: {
+          names,
+          sub,
+          sub: [, s2],
+          getjob,
+          mockdetails: { pre, final },
+        },
+      } = users;
+      console.log(names);
+      console.log(sub);
+      console.log(s2);
+      console.log(getjob);
+      console.log(pre);
+      console.log(final);
+    </script>
+  </body>
+</html>
